@@ -78,7 +78,7 @@ docker swarm leave --force
 
 ## Building Image and Pushing into dockerhub
 
-Build images inside mivroservices folder
+Build images inside individual microservices folder
 ```sh
 cd microservice1
 docker build -t kinnar0112/ms1:1.0 .
@@ -109,8 +109,10 @@ Apply Deployment And Services
 cd k8s
 kubectl apply -f ms1-deployment.yml
 kubectl apply -f ms1-service.yml
+
 kubectl apply -f ms2-deployment.yml
 kubectl apply -f ms2-service.yml
+
 kubectl apply -f ms3-deployment.yml
 kubectl apply -f ms3-service.yml
 ```
