@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ms1-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ms1
+  template:
+    metadata:
+      labels:
+        app: ms1
+    spec:
+      containers:
+      - name: ms1
+        image: kinnar0112/ms1:1.0
+        ports:
+        - containerPort: 3000
